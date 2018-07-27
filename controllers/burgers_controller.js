@@ -34,8 +34,9 @@ router.put("/burgers/inhaled/:id", function(req,res){
     var condition = "id = "+ req.params.id;
     // console.log("user input condtion" + condition);
 
-    burger.updateOne({ inhaled: req.body.inhaled }, condition, function(){
-       res.redirect('/burgers');
+    burger.updateOne({ inhaled: req.body.inhaled }, condition, function(result){
+    console.log(res, 'this is our data from the db');
+       res.json(result)
     });
 });
 

@@ -9,9 +9,9 @@
       <h2>Burgers to Eat!</h2>
       {{#each burgers}}
         {{#unless this.inhaled}}
-          <form id="update" action="/burgers/inhaled/{{this.id}}?_method=PUT" method="POST">
+          <form id="update" >
             <input type="hidden" name="inhaled" value="true">
-            <button class="btn btn-danger" type="submit">Inhale it!</button>
+            <button id="burgerEatBtn" data-burgerId="{{this.id}}" class="btn btn-danger" type="submit">Inhale it!</button>
           </form>
           <div class="well">
             {{this.id}}. {{this.burger_name}}
