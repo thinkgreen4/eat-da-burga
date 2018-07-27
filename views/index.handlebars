@@ -1,6 +1,6 @@
 <div class="container">
   
-  <img src="/public/assets/img/burgerMonst.jpg">
+  <img src="\assets\img\burgerMonster.jpg">
   <h1>Eat-Da-Burger!</h1>
 
   <div class="row">
@@ -8,8 +8,8 @@
     <div class="col-sm-6">
       <h2>Burgers to Eat!</h2>
       {{#each burgers}}
-        {{#unless this.inahled}}
-          <form id="update" action="/burgers/inhale/{{this.id}}?_method=PUT" method="POST">
+        {{#unless this.inhaled}}
+          <form id="update" action="/burgers/inhaled/{{this.id}}?_method=PUT" method="POST">
             <input type="hidden" name="inhaled" value="true">
             <button class="btn btn-danger" type="submit">Inhale it!</button>
           </form>

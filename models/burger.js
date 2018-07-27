@@ -3,13 +3,13 @@ var orm = require("../config/orm.js");
 
 //needs tweaking
 var burger = {
-selectAll: function(cb) {
+   selectAll: function(cb) {
       orm.selectAll("burgers", function(res) {
         cb(res);
       });
     },
-   updateOne: function(objColVals, condition, cb) {
-      orm.updateOne("burgers", objColVals, condition, function(res) {
+   updateOne: function(objColVal, condition, cb) {
+      orm.updateOne("burgers", objColVal, condition, function(res) {
         cb(res);
       });
     },

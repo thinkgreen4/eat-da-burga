@@ -30,11 +30,11 @@ router.post("/burgers/add", function (req,res){
 
 });
 
-router.put("/burgers/inahaled/:id", function(req,res){
+router.put("/burgers/inhaled/:id", function(req,res){
     var condition = "id = "+ req.params.id;
     // console.log("user input condtion" + condition);
 
-    burger.updateOne({ inhaled: req.body.inhaled },condition, function(){
+    burger.updateOne({ inhaled: req.body.inhaled }, condition, function(){
        res.redirect('/burgers');
     });
 });
